@@ -36,7 +36,7 @@ Landing-page/
 
 1. Clone or Download the Project
 
-git clone https://github.com/yourusername/boutique-landing-page.git
+git clone https://github.com/nalifamercina/Landing-page.git
 cd boutique-landing-page
 
 2. Open in Your Browser
