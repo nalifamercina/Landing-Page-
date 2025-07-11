@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi Collections Boutique</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: url("Multi.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.6); /* light overlay; use rgba(0,0,0,0.4) for dark */
+  z-index: -1;
+}
+
+
+    /* Header */
+    header {
+      background-color: darksalmon;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("D:\Project's\Landing Page\Multi.jpg") no-repeat center center/cover; /* Add your image URL */
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: black;
+      text-align: center;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+    }
+
+    /* Collections */
+    .collections {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: transparent;
+    }
+
+    .collection {
+      background: white;
+      border-radius: 10px;
+      margin: 15px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .collection img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .collection h3 {
+      padding: 15px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .collection:hover {
+      transform: scale(1.05);
+    }
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      .collections {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Multi Collections</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Style for Every Story</h2>
+      <p>Discover elegant, trendy, and timeless pieces. Curated for the fashion-forward you.</p>
+      <button class="btn" onclick="shopNow()">Shop Now</button>
+    </div>
+    <video id="logoVideo" width="100%" height="360" style="display:none; margin: 45px auto;" controls>
+    <source src="Multi.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  </section>
+
+  <!-- Collections Section -->
+  <section class="collections" id="collections">
+    <div class="collection">
+      <img src="anarkali.webp" alt="Women’s Wear" />
+      <h3>Women’s Wear</h3>
+    </div>
+    <div class="collection">
+      <img src="Shirt.webp" alt="Men’s Fashion" />
+      <h3>Men’s Fashion</h3>
+    </div>
+
+    <div class="collection">
+      <img src="Footwear.jpg" alt="Footwear" />
+      <h3>Footwear</h3>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2025 Multi Collections Boutique. All rights reserved.</p>
+  </footer>
+
+  <script>
+  function shopNow() {
+    alert("Thank you for visiting Multi Collections Boutique!\n\nContact us to place an order:\n📞 +91 xx231 43xx0\n📧 info@multicollections.com");
+    const video = document.getElementById('logoVideo');
+    video.style.display = 'block';
+    video.play();
+  }
+</script>
+</body>
+</html>
